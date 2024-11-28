@@ -1,9 +1,8 @@
-import "./TodoContainer.css";
-import TodoList from "./TodoList";
-function TodoContainer() {
+import PartiTodoList from "./PartiTodoList"
+import "./ParticularTodo.css"
+const ParticularTodo = () => {
   return (
     <div className="todo-container">
-      <h1>Tasks</h1>
       <div className="creater">
         <input
           placeholder="Enter Task Here"
@@ -16,9 +15,9 @@ function TodoContainer() {
           ➕
         </button>
       </div>
-      <TodoList />
+      <PartiTodoList/>
     </div>
-  );
+  )
 }
 
-export default TodoContainer;
+export default ParticularTodo

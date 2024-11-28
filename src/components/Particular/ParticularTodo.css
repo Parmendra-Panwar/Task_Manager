@@ -1,0 +1,143 @@
+.todo-container{
+  margin: 4rem;
+  background-color: rgb(249, 249, 249);
+  padding: 2rem;
+  width: 50%;
+  border-radius: 2rem;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .todo-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 821px) {
+  .todo-container{
+    width: 85%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+}
+/* @media screen and (max-width:490px) {
+  .todo-container{
+    padding: 1rem;
+    width: 90%;
+  }
+} */ */
+
+
+
+.styled-input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5em 0;
+  border: none;
+  border-bottom: 2px solid #000; 
+  outline: none;
+  width: 50%;
+  max-width: 300px;
+  transition: transform 0.2s ease, border-bottom-color 0.2s ease; 
+}
+
+.styled-input::placeholder {
+  color: #aaa; 
+}
+
+.styled-input:focus,
+.styled-input:not(:placeholder-shown) {
+  transform: translateY(3px); 
+  border-bottom-color: #007bff; 
+}
+
+
+.styled-date {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5em;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  outline: none;
+  width: 25%;
+  max-width: 300px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focused state for the date input */
+.styled-date:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+}
+
+/* Placeholder text (if supported by the browser) */
+.styled-date::placeholder {
+  color: #aaa;
+}
+
+/* Optional: Disabled state */
+.styled-date:disabled {
+  background-color: #f5f5f5;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+
+.button-30 {
+  margin-left: 12px;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.creater{
+  display: flex;
+  justify-content: space-evenly;
+
+}

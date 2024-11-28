@@ -22,6 +22,12 @@
     width: 100%;
   }
 }
+@media screen and (max-width:490px) {
+  .container{
+    top: 15%;
+  }
+}
+
 .container span {
   text-transform: uppercase;
   display: block; 
