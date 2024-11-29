@@ -1,4 +1,3 @@
-import React from "react";
 import Todo from "./Todo";
 
 interface TodoType {
@@ -7,17 +6,20 @@ interface TodoType {
   date: string;
 }
 
-const TodoList = () => {
-  const todoList: TodoType[] = [
-    { id: 1, title: "Buy milk", date: "2020-01" },
-    { id: 2, title: "Buy eggs", date: "2020-01" },
-    { id: 3, title: "Buy bread", date: "2020-01" },
-  ];
+interface TodoListProps {
+  todos: TodoType[];
+  deleteTodo: (id: number) => void;
+}
+
+const TodoList = ({ todos, deleteTodo }: TodoListProps) => {
+  if (todos.length === 0) {
+    return <div>No tasks found!</div>;
+  }
 
   return (
     <div className="todo-list">
-      {todoList.map((todo) => (
-        <Todo key={todo.id} to_do={todo} />
+      {todos.map((todo) => (
+        <Todo key={todo.id} to_do={todo} deleteTodo={deleteTodo} />
       ))}
     </div>
   );

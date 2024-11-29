@@ -1,23 +1,28 @@
 import express from "express";
 import { authenticate } from "../middleware/authenticate";
-import { getTodos, createTodo } from "../controllers/todoController";
+import { getTodos, createTodo , deteTodo } from "../controllers/todoController";
 
 const router = express.Router();
 
-router.get("/", authenticate, (req, res, next) => {
+// authenticate,
+
+router.get("/",  (req, res, next) => {
   try {
     getTodos(req, res);
   } catch (error) {
-    next(error); // Pass errors to the error-handling middleware
+    next(error); 
   }
 });
-
-router.post("/", authenticate, (req, res, next) => {
+ 
+router.post("/",  (req, res, next) => {
   try {
     createTodo(req, res);
   } catch (error) {
     next(error);
   }
 });
+
+
+router.post("/delete", deteTodo);
 
 export default router;
