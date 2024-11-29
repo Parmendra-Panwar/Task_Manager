@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import TodoContainer from "./components/TodoContainer.tsx";
 import PartiTodoList from "./components/Particular/PartiTodoList.tsx";
 import Home from "./components/Home.tsx";
+import TaskManagerBenefits from "./components/TMBenefits.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         element: <PartiTodoList />,
       },
     ],
+  },
+  {
+    path: "/help",
+    element: <TaskManagerBenefits />,
   },
 ]);
 
