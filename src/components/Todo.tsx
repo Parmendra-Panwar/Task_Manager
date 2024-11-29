@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 import "./Todo.css";
 
 interface TodoProps {
@@ -11,7 +12,7 @@ interface TodoProps {
 
 const Todo = ({ to_do, deleteTodo }: TodoProps) => {
   return (
-    <div className="todo" style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+    <div className="todo" style={{ display: "flex", flexDirection: "row", alignItems: "center" }}  >
       <h3>{to_do.title}</h3>
       <h4 style={{ marginLeft: "20px" }}>{to_do.date}</h4>
       <button
