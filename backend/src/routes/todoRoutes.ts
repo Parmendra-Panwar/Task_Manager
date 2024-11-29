@@ -1,10 +1,11 @@
 import express from "express";
 import { authenticate } from "../middleware/authenticate";
-import { getTodos, createTodo , deteTodo } from "../controllers/todoController";
+import { getTodos, createTodo , deteTodo ,nestedTodos } from "../controllers/todoController";
 
 const router = express.Router();
 
 // authenticate,
+router.get(`/:id`,nestedTodos)
 
 router.get("/",  (req, res, next) => {
   try {
@@ -25,4 +26,5 @@ router.post("/",  (req, res, next) => {
 
 router.post("/delete", deteTodo);
 
-export default router;
+export default router; 
+ 

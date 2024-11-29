@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function PartiCreate({ refreshTodos }: { refreshTodos: () => void }) {
+function Create({ refreshTodos }: { refreshTodos: () => void }) {
   const Taskdata = useRef<HTMLInputElement>(null);
   const TaskDate = useRef<HTMLInputElement>(null);
 
@@ -56,4 +56,4 @@ function PartiCreate({ refreshTodos }: { refreshTodos: () => void }) {
   );
 }
 
-export default PartiCreate;
+export default Create;

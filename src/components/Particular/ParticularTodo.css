@@ -2,7 +2,7 @@
   margin: 4rem;
   background-color: rgb(249, 249, 249);
   padding: 2rem;
-  width: 50%;
+  width: 30%;
   border-radius: 2rem;
   margin: auto;
   margin-top: 5rem;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 1025px) {
   .todo-container{
-    width: 80%;
+    width: 30%;
     margin: auto;
     margin-top: 3rem;
     padding: 1rem;

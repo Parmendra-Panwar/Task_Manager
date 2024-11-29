@@ -1,4 +1,3 @@
-
 import PartiTodo from "./PartiTodo";
 
 interface TodoType {
@@ -7,12 +6,12 @@ interface TodoType {
   date: string;
 }
 
-const PartiTodoList = () => {
-  const todoList: TodoType[] = [
-    { id: 1, title: "Buy milk", date: "2020-01" },
-    { id: 2, title: "Buy eggs", date: "2020-01" },
-    { id: 3, title: "Buy bread", date: "2020-01" },
-  ];
+interface TodoListProps {
+  todos: TodoType[];
+}
+
+const PartiTodoList = ({ todos }: TodoListProps) => {
+  const todoList: TodoType[] = todos;
 
   return (
     <div className="todo-list">
@@ -23,4 +22,4 @@ const PartiTodoList = () => {
   );
 };
 
-export default PartiTodoList
+export default PartiTodoList;

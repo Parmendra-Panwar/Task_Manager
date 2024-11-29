@@ -22,7 +22,9 @@ app.use(cors());
 // Routes
 app.use("/api/todos", todoRoutes);
 
+ 
 // Error Handling
 app.use(errorHandler);
 
 export default app; 
+ 

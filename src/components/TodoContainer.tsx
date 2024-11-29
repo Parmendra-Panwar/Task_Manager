@@ -12,7 +12,6 @@ interface TodoType {
 function TodoContainer() {
   const [todos, setTodos] = useState<TodoType[]>([]);
 
-  // Fetch the todos from the server
   const fetchTodos = async () => {
     try {
       const response = await fetch("http://localhost:8080/api/todos");
